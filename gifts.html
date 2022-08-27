@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Gifts</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <style>
+         ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #bbb;
+  }
+  
+  .product-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #6bffc8 0%, #42c8cb 100%);
+    border-radius: 20px 20px 0 0;
+    padding: 55px 0;
+    width: 100%;
+    margin: auto;
+  }
+  .product-pic {
+    max-width: 180px;
+    position: relative;
+    left: 0;
+    margin: 40px 0;
+    filter: drop-shadow(-6px 40px 23px rgba(0, 0, 0, 0.5));
+  }
+  .product-details {
+    padding: 40px;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+  }
+  .product-details .title {
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .product-details .colorCat {
+    text-transform: uppercase;
+    font-style: italic;
+    color: #bbb;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .product-details .price {
+    font-weight: 700;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  .product-details .price .current {
+    color: #fe6168;
+    margin-left: 6px;
+  }
+  .product-details .before {
+    text-decoration: line-through;
+  }
+  .product-details header {
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .product-details article > h5 {
+    margin: 0;
+  }
+  .product-details article > p {
+    color: #bbb;
+    margin: 0.5em 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .product-details .controls {
+    margin: 3em 0;
+  }
+  .product-details .controls > div {
+    flex: 1;
+  }
+  .product-details .controls .option {
+    margin-top: 12px;
+    display: inline-block;
+    position: relative;
+  }
+  .product-details .controls .option:hover {
+    color: #444444;
+  }
+  .product-details .controls .option::before {
+    content: "";
+    position: absolute;
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+    top: 0;
+    bottom: 0;
+    height: 5px;
+    width: 5px;
+    right: -18px;
+    margin: auto;
+    transform: rotate(135deg);
+  }
+  .product-details .controls > div + div {
+    margin-top: 20px;
+    flex: none;
+  }
+  .product-details .controls ul {
+    display: flex;
+    margin: 15px 5px;
+  }
+  .product-details .color li + li {
+    margin-left: 15px;
+  }
+  .product-details .colors {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: block;
+  }
+  .product-details .color-bdot1 {
+    background-color: #59e8c8;
+  }
+  .product-details .color-bdot1:hover, .product-details .color-bdot1.active {
+    box-shadow: 0 0 0 3px white, 0 0 0 5px #59e8c8;
+  }
+  .product-details .color-bdot2 {
+    background-color: #ffee71;
+  }
+  .product-details .color-bdot2:hover, .product-details .color-bdot2.active {
+    box-shadow: 0 0 0 3px white, 0 0 0 5px #ffee71;
+  }
+  .product-details .color-bdot3 {
+    background-color: #6654af;
+  }
+  .product-details .color-bdot3:hover, .product-details .color-bdot3.active {
+    box-shadow: 0 0 0 3px white, 0 0 0 5px #6654af;
+  }
+  .product-details .color-bdot4 {
+    background-color: #343434;
+  }
+  .product-details .color-bdot4:hover, .product-details .color-bdot4.active {
+    box-shadow: 0 0 0 3px white, 0 0 0 5px #343434;
+  }
+  .product-details .color-bdot5 {
+    background-color: #dfdfdf;
+  }
+  .product-details .color-bdot5:hover, .product-details .color-bdot5.active {
+    box-shadow: 0 0 0 3px white, 0 0 0 5px #dfdfdf;
+  }
+  .product-details .rate {
+    position: static;
+    margin-top: 10px;
+  }
+  .product-details .rate a {
+    font-size: 18px;
+    color: #bbb;
+  }
+  .product-details .rate a.active, .product-details .rate a:hover {
+    color: #fe6067;
+  }
+  
+  .dots {
+    display: flex;
+    margin-top: 40px;
+  }
+  .dots > a {
+    background-color: #349a98;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    border-radius: 50%;
+  }
+  .dots > a:hover, .dots > a.active {
+    background-color: white;
+  }
+  .dots i {
+    display: none;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer > button {
+    display: flex;
+    border: 0;
+    padding: 15px 25px;
+    align-items: center;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #ff886b 0%, #ff4164 100%);
+    box-shadow: 0 10px 30px 0 rgba(255, 136, 107, 0.7);
+    transition: 200ms;
+  }
+  .footer > button:hover {
+    background: linear-gradient(to bottom, #ff4164 0%, #ff886b 100%);
+  }
+  .footer > button > img {
+    width: 31px;
+  }
+  .footer > button > span {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 10px;
+    color: white;
+  }
+  .footer > a img {
+    width: 24px;
+    opacity: 0.8;
+  }
+  .footer > a:hover img {
+    opacity: 1;
+  }
+  
+  @media (min-width: 37.5em) {
+    .product-details .rate {
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      margin-top: 0;
+    }
+    .product-details .controls > div.qty {
+      width: 60px;
+    }
+    .product-details .controls > div + div {
+      border-left: 2px solid rgba(187, 187, 187, 0.5);
+      padding-left: 25px;
+      padding-right: 25px;
+      width: 100px;
+      margin-top: 0;
+    }
+    .product-details .controls {
+      display: flex;
+    }
+  }
+  @media (min-width: 56.25em) {
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: normal;
+      margin: auto;
+    }
+  
+    .product-image {
+      border-radius: 20px 0 0 20px;
+      max-width: 330px;
+    }
+  
+    .product-pic {
+      left: -40px;
+      max-width: 330px;
+    }
+  
+    .product-details {
+      width: 100%;
+      border-radius: 0 20px 20px 0;
+    }
+  }
+      </style>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section header_bg">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+           <a class="logo" href="index.html"><img src="images/588258.png"></a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                 <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Home</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="wish.html">Wish</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="gifts.html">Best Deals</a>
+                 </li>
+                 
+                 <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                 </li>
+              </ul>
+           </div>
+           <div class="main">
+              <form class="form-inline my-2 my-lg-0">
+                 <div class="call_text">
+                    <ul>
+                       <li><a href="#"><img src="images/call-icon.png"><span class="padding_left_10">+71 67896543</span></a></li>
+                       <li><a href="#"><img src="images/mail-icon.png"><span class="padding_left_10">demo@gmail.com</span></a></li>
+                       <li><a href="#"><img src="images/search-icon.png"></a></li>
+                    </ul>
+                 </div>
+              </form>
+           </div>
+        </nav>
+     </div>
+      <!-- header section start -->
+      <!-- sifts section start -->
+      <div class="gifts_section layout_padding">
+         <div class="container">
+            <div class="container">
+               <!--   https://www.jerecho.com/codepen/nike-product-page/ -->
+                 <div class="product-image">
+                   <img src="http://co0kie.github.io/codepen/nike-product-page/nikeLogo.png" alt="" class="product-logo">  
+                   <img src="http://co0kie.github.io/codepen/nike-product-page/nikeShoe.png" alt="" class="product-pic">
+                   <div class="dots">
+                     <a href="#!" class="active"><i>1</i></a>
+                     <a href="#!"><i>2</i></a>
+                     <a href="#!"><i>3</i></a>
+                     <a href="#!"><i>4</i></a>
+                   </div>
+                 </div>
+                 
+                 <div class="product-details">
+                   <header>
+                     <h1 class="title">Nike Roshe Run</h1>
+                     <span class="colorCat">mint green</span>
+                     <div class="price">
+                       <span class="before">$150</span>
+                       <span class="current">$144.99</span>
+                     </div>
+                     <div class="rate">
+                       <a href="#!" class="active">★</a>
+                       <a href="#!" class="active">★</a>
+                       <a href="#!" class="active">★</a>
+                       <a href="#!">★</a>
+                       <a href="#!">★</a>
+                     </div>
+                   </header>
+                   <article>
+                     <h5>Description</h5>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                   </article>
+                   <div class="controls">
+                     <div class="color">
+                       <h5>color</h5>
+                       <ul>
+                         <li><a href="#!" class="colors color-bdot1 active"></a></li>
+                         <li><a href="#!" class="colors color-bdot2"></a></li>
+                         <li><a href="#!" class="colors color-bdot3"></a></li>
+                         <li><a href="#!" class="colors color-bdot4"></a></li>
+                         <li><a href="#!" class="colors color-bdot5"></a></li>
+                       </ul>
+                     </div>
+                     <div class="size">
+                       <h5>size</h5>
+                       <a href="#!" class="option">(UK 8)</a>
+                     </div>
+                     <div class="qty">
+                       <h5>qty</h5>
+                       <a href="#!" class="option">(1)</a>
+                     </div>
+                   </div>
+                   <div class="footer">
+                     <button type="button">
+                       <img src="http://co0kie.github.io/codepen/nike-product-page/cart.png" alt="">
+                       <span>add to cart</span>
+                     </button>
+                      <a href="#!"><img src="http://co0kie.github.io/codepen/nike-product-page/share.png" alt=""></a>
+                   </div>
+                 </div>
+                 
+               </div>
+               
+               <a href="https://www.youtube.com/watch?v=qGOxPVHfZuE" target="_blank" title="Watch me speed code this" style="position: fixed; bottom: 10px; right: 10px"><img src="http://co0kie.github.io/codepen/youtube.png" alt=""></a>
+         </div>
+      </div>
+      <!-- sifts section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="social_icon">
+               <ul>
+                  <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                  <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                  <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                  <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+               </ul>
+            </div>
+         </div>
+         <!-- copyright section start -->
+         <div class="copyright_section">
+            <div class="container">
+               <p class="copyright_text">Copyright 2019 All Right Reserved By <a href="https://html.design">Free  html Templates</a></p>
+            </div>
+         </div>
+         <!-- copyright section end -->
+      </div>
+      <!-- footer section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script>
+         if ( $(window).width() > 990) { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 350,
+             loop:true,
+             margin:35,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+          }
+         
+         
+         
+          else { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 70,
+             loop:true,
+             margin:10,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+           }    
+         
+      </script>
+      <script type="text/javascript">
+         $(window).scroll(function(){
+         var sticky = $('#navbar'),
+         scroll = $(window).scrollTop();
+         
+         if (scroll >= 600) sticky.addClass('fix-nav');
+         else sticky.removeClass('fix-nav');
+         });
+      </script>
+   </body>
+</html>
